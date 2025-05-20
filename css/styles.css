@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,7 +15,7 @@
 }
 
 .modal, .form_container {
-  border: 1px solid black;
+ 
   height: 100vh;
   width: 50%;
 
@@ -21,6 +23,38 @@
 
 .modal {
   width: 35%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.402), rgba(0, 0, 0, 0.411)), url(../images/marcus-loke-colorful.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: flex;
+  justify-self: center;
+  
+  background-image: url(../images/03.Artmosphereless.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: center;
+
+  width: 65%;
+  height: 300px;
+  margin: 0 auto;
+
+}
+
+.bg-credit {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 300px;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-family: "Merienda", cursive;
 }
 
 .form_container {
