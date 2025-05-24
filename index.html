@@ -28,22 +28,26 @@
         </p>
       </div>
 
-      <form action="" class="form_inputs">
+      <form action="#" method="post" class="form_inputs">
+
+        <div class="sign-up">
+          <h3 Account-header>Sign up</h3>
+        </div>
 
         <div class="fullname">
           <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Name">
-          
+          <input type="text" id="name" name="name" placeholder="Name" pattern="^[A-Z][a-z]+$">
+           
           <label for="surname"></label>
-          <input type="text" name="surname" id="surname" placeholder="Surname">
+          <input type="text" name="surname" id="surname" placeholder="Surname" pattern="^[A-Z][a-z]+$">
         </div>
 
         <div class="contacts">
           <label for="email"></label>
-          <input type="email" name="email" id="email" placeholder="Email">
+          <input type="email" name="email" id="email" placeholder="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
 
           <label for="number"></label>
-          <input type="tel" name="Phone-number" placeholder="Phone number">
+          <input type="tel" name="Phone-number" placeholder="Phone number" pattern="^\d{10}$">
         </div>
 
         <div class="password">
@@ -54,13 +58,11 @@
           <input type="password" name="confirm-password" id="confirm password" placeholder="Confirm-password">
         </div>
 
-      </form>
-
       <div class="button">
         
         <div class="terms">
-          <input type="checkbox" name="checkbox" id="checkbox">
-          <label for="checkbox">Please accept the  <span>terms and conditons</span></label>
+          <input type="checkbox" name="checkbox" id="checkbox" required>
+          <label for="checkbox">Please accept the  <span>Terms</span> and <span>Conditons</span></label>
         </div>
         
         <div class="btn-container">
@@ -68,6 +70,8 @@
         </div>
     
       </div>
+
+      </form>
 
       <div class="footer">
         <h3 class="footer-tittle">Artmosfearless Group ltd</h3>

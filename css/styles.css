@@ -49,8 +49,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -59,13 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal, .form_container {
-  height: 100vh;
+  height: 100%;
   width: 50%;
 
 }
 
 .modal {
   width: 35%;
+  height: 660px;
   justify-self: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.402), rgba(0, 0, 0, 0.411)), url(../images/marcus-loke-colorful.jpg);
   background-size: cover;
@@ -106,13 +105,17 @@ p {
   flex-direction: column;
   flex-basis: 1;
   width: 65%;
+  background-color: #253342;
+  height: 660px;
+
 }
 
 .header,
 .button {
-  background-color: #E2E3E7;
+  /*background-color: #E2E3E7;*/
   padding: 32px 48px;
-  height: 35%;
+  height: 200px;
+  
 }
 
 
@@ -120,29 +123,32 @@ p {
   margin-bottom: 8px;
   font-size: 24px;
   font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
 }
 
 .header-text {
-  color: black;
-  text-align: left;
+  color: #e7e3e5;
+  text-align: center;
+  font-size: 14px;
+}
+.sign-up {
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
-
-
 .form_inputs{
-  
-  height: 50%;
-  background-color: #e2e3e77e;
+  height: 400px;
   padding: 32px 48px;
-
   box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.6);
   -webkit-box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.6);
   -moz-box-shadow: 0px 2px 13px 3px rgba(0,0,0,0.6);
   z-index: 1;
-
   width: 99.9%;
   margin: 0 auto;
-
 }
 
 input[type="text"],
@@ -151,17 +157,76 @@ input[type="password"],
 input[type="tel"] {
   width: 250px;
   margin: 0px 16px 24px 0px;
+  border: none;
+  outline: none;
+  border-bottom:1px solid #6d9f41;
+  background-color: transparent;
+  transition: 500ms ease all;
+  color: #e7e3e5;
 }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  border-bottom: 1px solid lch(81.87% 100.96 128.89);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder {
+  color:#e7e3e5;
+  letter-spacing: 1px;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="tel"]:focus::placeholder {
+  color: lch(81.87% 100.96 128.89);
+  transition: 500ms ease all;
+  
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid,
+input[type="tel"]:invalid {
+  border-bottom: 1px solid #ca3637;
+  color: #ca3637;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="password"]:valid,
+input[type="tel"]:valid {
+  border-bottom: 1px solid #6d9f41;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 0px;
+}
+
 
 input[type="checkbox"] {
   vertical-align:text-bottom;
   margin-right: 2px;
   width: 16px;
   height: 16px;
+
 }
 
 .terms {
   margin-bottom: 24px;
+  color: #e7e3e5;
+}
+
+span {
+  color:#ca3637;
 }
 
 .submit-btn {
@@ -170,14 +235,28 @@ input[type="checkbox"] {
   border-radius: 8px;
   font-weight: 600;
   letter-spacing: .5px;
+  background-color: #e7e3e5;
+  color: #ca3637;
+  border: none;
+  cursor:pointer ;
+}
+
+.submit-btn:hover {
+  background-color: #6d9f41;
+  color: #e7e3e5;
+  transition: 500ms ease all;
+}
+
+.submit-btn:active {
+  background-color: #6d9f4171;
 }
 
 .footer {
-  background-color: black;
+  background-color: transparent;
   height: 15%;
-  color: white;
+  color: #e7e3e5;
   font-size: 12px;
-  padding: 8px 0;
+  padding: 24px 0;
   text-align: center;
 }
 
